@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twenty CRM — Pourquoi pas Notion ?</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #0f172a; color: #fff; }
+.container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+h1 { font-size: 48px; font-weight: 900; margin-bottom: 10px; background: linear-gradient(135deg, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.subtitle { font-size: 20px; color: #94a3b8; margin-bottom: 50px; }
+
+.section { margin-bottom: 50px; }
+.section-title { font-size: 28px; font-weight: 800; margin-bottom: 20px; color: #3b82f6; }
+.section-title span { color: #fff; }
+
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 16px; overflow: hidden; border: 1px solid #1e293b; }
+.compare-header { padding: 20px; text-align: center; font-weight: 700; font-size: 20px; }
+.compare-twenty { background: #1e3a5f; color: #3b82f6; }
+.compare-notion { background: #1e293b; color: #94a3b8; }
+.compare-row { display: contents; }
+.compare-cell { padding: 16px 20px; border-top: 1px solid #1e293b; font-size: 15px; }
+.compare-twenty-cell { background: #0f1f33; }
+.compare-notion-cell { background: #131d2b; }
+.check { color: #22c55e; font-weight: 700; }
+.cross { color: #ef4444; }
+.warn { color: #f59e0b; }
+
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.feature-card { background: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 28px; }
+.feature-icon { font-size: 32px; margin-bottom: 12px; }
+.feature-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.feature-card p { font-size: 14px; color: #94a3b8; line-height: 1.6; }
+
+.use-case { background: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 28px; margin-bottom: 16px; }
+.use-case h3 { font-size: 18px; font-weight: 700; color: #3b82f6; margin-bottom: 8px; }
+.use-case p { font-size: 14px; color: #94a3b8; line-height: 1.6; }
+.use-case .flow { margin-top: 12px; padding: 12px 16px; background: #0f172a; border-radius: 8px; font-family: monospace; font-size: 13px; color: #e2e8f0; }
+
+.verdict { background: linear-gradient(135deg, #1e3a5f, #1e293b); border: 1px solid #3b82f6; border-radius: 16px; padding: 32px; margin-top: 30px; }
+.verdict h2 { font-size: 24px; font-weight: 800; margin-bottom: 12px; }
+.verdict p { font-size: 15px; color: #cbd5e1; line-height: 1.7; }
+.verdict strong { color: #fff; }
+
+@media (max-width: 600px) {
+  .feature-grid { grid-template-columns: 1fr; }
+  .compare { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Twenty CRM</h1>
+<div class="subtitle">Pourquoi pas Notion ? La vraie différence.</div>
+
+<!-- Section 1: Comparatif direct -->
+<div class="section">
+  <div class="section-title">⚔️ <span>Twenty vs Notion</span></div>
+  <div class="compare">
+    <div class="compare-header compare-twenty">Twenty CRM</div>
+    <div class="compare-header compare-notion">Notion</div>
+
+    <div class="compare-row">
+      <div class="compare-cell compare-twenty-cell"><span class="check">✅</span> Pipeline de ventes avec stages auto</div>
+      <div class="compare-cell compare-notion-cell"><span class="cross">❌</span> Base de données statique</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-twenty-cell"><span class="check">✅</span> Enrichissement automatique des leads</div>
+      <div class="compare-cell compare-notion-cell"><span class="cross">❌</span> Saisie manuelle obligatoire</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-twenty-cell"><span class="check">✅</span> Sync email Gmail/Outlook intégré</div>
+      <div class="compare-cell compare-notion-cell"><span class="cross">❌</span> Pas de sync email</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-twenty-cell"><span class="check">✅</span> Workflows automatisés (changement de stage → email → tâche)</div>
+      <div class="compare-cell compare-notion-cell"><span class="cross">❌</span> Automatisations limitées aux formules</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-twenty-cell"><span class="check">✅</span> Timeline d'activité (appels, emails, notes)</div>
+      <div class="compare-cell compare-notion-cell"><span class="cross">❌</span> Pas de timeline</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-twenty-cell"><span class="check">✅</span> API REST complète + SDK</div>
+      <div class="compare-cell compare-notion-cell"><span class="warn">⚠️</span> API limitée, rate limits bas</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-twenty-cell"><span class="check">✅</span> Webhooks temps réel</div>
+      <div class="compare-cell compare-notion-cell"><span class="cross">❌</span> Pas de webhooks natifs</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-twenty-cell"><span class="check">✅</span> Multi-utilisateurs + rôles</div>
+      <div class="compare-cell compare-notion-cell"><span class="check">✅</span> Multi-utilisateurs</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-twenty-cell"><span class="check">✅</span> Self-hosted, données chez toi</div>
+      <div class="compare-cell compare-notion-cell"><span class="cross">❌</span> Données chez Notion (US)</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-twenty-cell"><span class="check">✅</span> 45 000 ⭐ GitHub, communauté active</div>
+      <div class="compare-cell compare-notion-cell"><span class="warn">⚠️</span> Propriétaire, pas de modif possible</div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 2: Features clés -->
+<div class="section">
+  <div class="section-title">🎯 <span>Fonctionnalités qui changent tout</span></div>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🤖</div>
+      <h3>Enrichissement auto</h3>
+      <p>Tu ajoutes un email → Twenty trouve le nom, l'entreprise, le poste, le LinkedIn, le chiffre d'affaires. Sans rien faire.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📧</div>
+      <h3>Sync email bidirectionnel</h3>
+      <p>Connecte Gmail/Outlook. Chaque email avec un lead est automatiquement dans sa timeline. Tu réponds depuis Twenty.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Workflows</h3>
+      <p>Quand un lead passe en "qualifié" → créer une tâche + envoyer un email + notifier sur Telegram. Sans code.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔄</div>
+      <h3>Webhooks temps réel</h3>
+      <p>Lead créé → webhook → n8n → Listmonk → email de bienvenue. Ou → Hermès → analyse du lead. Zéro polling.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Pipelines visuels</h3>
+      <p>Glisser-déposer les leads entre les stages. Vue kanban + tableau + calendrier. Chaque mouvement déclenche des actions.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔌</div>
+      <h3>API + SDK</h3>
+      <p>API REST complète. Je peux créer/lire/update des leads, notes, activités, workflows directement depuis Hermès.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3: Use cases concrets pour toi -->
+<div class="section">
+  <div class="section-title">🚀 <span>Use cases concrets pour Dan</span></div>
+
+  <div class="use-case">
+    <h3>1. Pipeline 30k contacts comptables</h3>
+    <p>Tu importes les 30k contacts → Twenty enrichit automatiquement (entreprise, CA, poste) → tu tagues par segment (EC, expert-comptable, cabinet) → je crée les workflows : "quand un lead EC est créé → webhook → Listmonk → email de bienvenue".</p>
+    <div class="flow">Lead créé → Twenty enrichit → Tag "EC" → Webhook → n8n → Listmonk → Email séquence</div>
+  </div>
+
+  <div class="use-case">
+    <h3>2. Cross-canal (X + LinkedIn + Email)</h3>
+    <p>Un lead commente sur X → je le crée dans Twenty → Twenty enrichit → je check si il est déjà dans MimikFlow → si oui, pas de doublon → si non, je lance une séquence LinkedIn.</p>
+    <div class="flow">Lead X → Twenty → Enrichissement → Check MimikFlow → Outreach LinkedIn ou Email</div>
+  </div>
+
+  <div class="use-case">
+    <h3>3. Automatisation FinPilot</h3>
+    <p>Un cabinet s'inscrit sur fecpilot.fr → webhook → Twenty crée le lead → tag "FinPilot trial" → envoie un email de bienvenue (Listmonk) → crée une tâche "Appel onboarding J+1".</p>
+    <div class="flow">Inscription → Twenty → Tag + Email + Tâche → Suivi automatisé</div>
+  </div>
+
+  <div class="use-case">
+    <h3>4. Scoring et priorisation</h3>
+    <p>Twenty calcule un score automatique : (taille entreprise × secteur × engagement email × interactions LinkedIn). Les leads chauds remontent en haut de ta pipeline. Tu passes 80% de ton temps sur les 20% qui valent le coup.</p>
+  </div>
+</div>
+
+<!-- Section 4: Verdict -->
+<div class="verdict">
+  <h2>Verdict</h2>
+  <p>
+    <strong>Notion stocke l'information. Twenty CRM l'active.</strong><br><br>
+    Notion, c'est parfait pour ta base de connaissance, tes docs, ta stratégie. Mais pour gérer un pipeline de 30k leads avec des automatismes, du scoring, de l'enrichissement auto, et une timeline complète — Twenty est dans une autre catégorie.<br><br>
+    <strong>La différence :</strong> Avec Notion, tu passes 30 min par jour à mettre à jour des statuts. Avec Twenty + moi (Hermès), le pipeline se met à jour tout seul. Tu passes de "gérer les leads" à "choisir les meilleurs leads".<br><br>
+    <strong>Et le coût ?</strong> Twenty est open source, self-hosté sur ton VPS. Zéro abonnement. Juste le temps de le déployer (15 min, je le fais).
+  </p>
+</div>
+
+</div>
+</body>
+</html>
